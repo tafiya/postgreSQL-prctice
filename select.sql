@@ -133,3 +133,16 @@ SELECT * from students LIMIT 5 OFFSET 5*2;
 DELETE from students
 WHERE grade='C' and county ='Khulna';
 SELECT * from students;
+
+-- update --> update delete and select ar moto
+UPDATE students
+SET email='abc@gmail.com';
+--  jodi ei commad dei tahole sob row te ei email set kore dibe.
+UPDATE students
+SET email='abc@gmail.com' 
+WHERE student_id = 7;
+--  ekhane single row ar value change hoyeche.
+-- multiple row ar value change kora jay coma diye
+UPDATE students
+SET email='abc@gmail.com' , age =30 
+WHERE student_id = 7;
