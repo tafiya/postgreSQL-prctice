@@ -112,3 +112,18 @@ SELECT * from students
 WHERE first_name LIKE 'a%';
 SELECT * from students 
 WHERE first_name ILIKE 'a%';
+
+
+-- Limit and Offset->>used for pagination
+-- Limit == kotogulo data dekhabe.
+--  offset == 1st theke koto gulo data bad dibe
+
+SELECT * from students LIMIT 5;
+SELECT * from students LIMIT 5 OFFSET 2;
+-- for pagination--> offset* page number
+-- 1st page:
+SELECT * from students LIMIT 5 OFFSET 5*0; 
+-- 2nd page:
+SELECT * from students LIMIT 5 OFFSET 5*1;
+-- 3rd page:
+SELECT * from students LIMIT 5 OFFSET 5*2; 
