@@ -127,3 +127,9 @@ SELECT * from students LIMIT 5 OFFSET 5*0;
 SELECT * from students LIMIT 5 OFFSET 5*1;
 -- 3rd page:
 SELECT * from students LIMIT 5 OFFSET 5*2; 
+
+-- Delete operation
+-- condition diye amra select ar moto delete o korte pari.
+DELETE from students
+WHERE grade='C' and county ='Khulna';
+SELECT * from students;
