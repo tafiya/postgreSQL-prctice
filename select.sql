@@ -77,3 +77,38 @@ SELECT count(age) from students;
 -- combine Scaler and aggregate function
 
 SELECT min( length(first_name)) from students;
+
+-- In ar use(Multiple or thakle IN use hoy)
+SELECT * from students WHERE county='Khulna'or county='Dhaka' or county='Tangail';
+-- This can solve using IN
+SELECT * from students WHERE county IN('Khulna','Dhaka','Tangail');
+-- Not IN-->>oi country gulo bad a baki gula
+SELECT * from students WHERE county NOT IN('Khulna','Dhaka','Tangail');
+
+-- Between
+SELECT * from students WHERE age BETWEEN 21 and 22;
+SELECT * from students 
+WHERE dob BETWEEN '2002-11-30' and '2003-05-22' 
+ORDER BY dob;
+-- like
+
+-- first start with a.
+SELECT * from students 
+WHERE first_name LIKE 'A%';
+
+-- last a thakbe.surute onk letter thakte pare
+SELECT * from students 
+WHERE first_name LIKE '%a';
+
+-- first a 3 ta jekono letter .4 no ta a hobe tarpor onno word thkabe
+SELECT * from students 
+WHERE first_name LIKE '___a%';
+-- first a 3 ta jekono letter .4 no ta a hobe tarpor onno ekta word thkabe
+SELECT * from students 
+WHERE first_name LIKE '___a_';
+
+-- difference between LIKE and ILIKE--> LIKE== case sensitive ILIKE == case Insensitive
+SELECT * from students 
+WHERE first_name LIKE 'a%';
+SELECT * from students 
+WHERE first_name ILIKE 'a%';
