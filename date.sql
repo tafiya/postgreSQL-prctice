@@ -29,3 +29,4 @@ SELECT *, age(CURRENT_DATE,dob) as Years from students ;
 SELECT extract( month from '2024-01-25'::date);
 
 -- type casting 
+
